@@ -25,6 +25,9 @@ gem "httparty"
 # AWS S3 for storing audio files (or use cloudinary gem instead)
 gem "aws-sdk-s3"
 
+# Resend for email via HTTP API (works on Railway free tier - 100 emails/day free)
+gem "resend"
+
 group :development do
   # Environment variables (only for development, not test)
   gem "dotenv-rails"
