@@ -2,7 +2,7 @@ class VoiceGeneration < ApplicationRecord
   MAX_TEXT_LENGTH = 1000
 
   validates :text, presence: true, length: { minimum: 1, maximum: MAX_TEXT_LENGTH }
-  validates :status, presence: true, inclusion: { in: %w[pending processing completed failed] }
+  validates :status, presence: true, inclusion: { in: %w[ pending processing completed failed ] }
   validates :voice_id, presence: true
   validates :notify_email, format: { with: URI::MailTo::EMAIL_REGEXP }, allow_blank: true
 

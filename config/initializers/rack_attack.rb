@@ -17,7 +17,7 @@ class Rack::Attack
     match_data = req.env["rack.attack.match_data"]
     retry_after = match_data[:period] - (match_data[:epoch_time] % match_data[:period])
 
-    [429, { "Content-Type" => "application/json", "Retry-After" => retry_after.to_s },
-     [{ error: "Rate limit exceeded", retry_after_seconds: retry_after }.to_json]]
+    [ 429, { "Content-Type" => "application/json", "Retry-After" => retry_after.to_s },
+     [ { error: "Rate limit exceeded", retry_after_seconds: retry_after }.to_json ] ]
   end
 end

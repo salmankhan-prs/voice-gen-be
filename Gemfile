@@ -32,15 +32,15 @@ end
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-  
+
   # SQLite for test database (simpler than setting up separate Postgres)
   gem "sqlite3"
-  
+
   # Testing
   gem "rspec-rails"        # They asked for RSpec
   gem "factory_bot_rails"  # Test data factories
   gem "webmock"            # Mock HTTP requests (for ElevenLabs API tests)
-  
+
   # Code quality
   gem "bundler-audit", require: false
   gem "brakeman", require: false

@@ -53,7 +53,7 @@ Rails.application.configure do
 
   # Use test adapter for ActiveJob (not Solid Queue) - jobs run inline during tests
   config.active_job.queue_adapter = :test
-  
+
   # Disable Solid Queue in test environment
   config.solid_queue.connects_to = nil if config.respond_to?(:solid_queue)
 end

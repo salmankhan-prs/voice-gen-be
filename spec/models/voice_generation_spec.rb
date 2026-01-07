@@ -23,7 +23,7 @@ RSpec.describe VoiceGeneration, type: :model do
     it ".recent returns ordered by created_at desc" do
       old = create(:voice_generation, created_at: 2.days.ago)
       new = create(:voice_generation, created_at: 1.day.ago)
-      expect(VoiceGeneration.recent).to eq([new, old])
+      expect(VoiceGeneration.recent).to eq([ new, old ])
     end
   end
 end
